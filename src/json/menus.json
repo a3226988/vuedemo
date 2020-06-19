@@ -1,0 +1,5 @@
+[
+	{"id":1,"name":"用户管理","to":"/main/user"},
+	{"id":2,"name":"员工管理","to":"/main/emp"},
+	{"id":3,"name":"退出","to":"/logout"}
+]

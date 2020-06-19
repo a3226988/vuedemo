@@ -1,8 +1,18 @@
 import Vue from 'vue'
 import App from './App.vue'
-
+import router from './router/index.js'
 Vue.config.productionTip = false
 
+
+import axios from 'axios' 
+axios.interceptors.response.use(function (response) {
+		return response.data;
+	}, function (error) {
+		return Promise.reject(error);
+	});
+
+Vue.prototype.$http = axios;
 new Vue({
-  render: h => h(App),
+	router,
+  render: h => h(App)
 }).$mount('#app')
